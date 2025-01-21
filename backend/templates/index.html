@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Search Engine</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with login/logout -->
+        <div class="header">
+            <span id="welcome-message" class="welcome-message"></span>
+            <button id="register-btn" class="register-btn">Register</button>
+            <button id="login-btn" class="login-btn">Login</button>
+            <button id="logout-btn" class="logout-btn" style="display: none;">Logout</button>
+        </div>
+
+        <h1>PhD Search</h1>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input id="query" type="text" placeholder="Search for PhD positions..." class="full-width">
+            <button id="search-btn" class="search-btn">Search</button>
+        </div>
+
+        <!-- Recommendations Section -->
+        <div id="recommendations" style="margin-top: 20px;">
+            <h2 style="font-size: 1.5em; color: #333; text-align: center; margin-bottom: 15px;">Recommended for You</h2>
+            <div id="recommendation-container" style="display: flex; justify-content: space-between; gap: 15px; align-items: stretch;">
+                <!-- Recommendation cards will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+        
+
+        <!-- Filters -->
+        <div class="filters" style="margin-top: 20px;">
+            <select id="location-filter">
+                <option value="">All Locations</option>
+            </select>
+            <select id="university-filter">
+                <option value="">All Universities</option>
+            </select>
+            <select id="year-filter">
+                <option value="">All Years</option>
+            </select>
+            <button id="filter-btn" class="filter-btn">Apply Filters</button>
+        </div>
+
+        <!-- Results Table -->
+        <table id="results" class="results-table" style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>University</th>
+                    <th>Location</th>
+                    <th>Year</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5">No results yet. Enter a query or select filters to search.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username</label>
+                <input id="username" type="text" placeholder="Enter your username" required>
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter your password" required>
+                <button type="submit" class="login-submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-register-modal" class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="register-username">Username</label>
+                <input id="register-username" type="text" placeholder="Enter your username" required>
+                <label for="register-password">Password</label>
+                <input id="register-password" type="password" placeholder="Enter your password" required>
+                <button type="submit" class="register-submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

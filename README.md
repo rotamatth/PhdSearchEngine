@@ -1,2 +1,6 @@
-# PhdSearchEngine
-Phd search engine build for Information retrieval Bachelor course.
+# PHD
+phd retrieval search engine project
+
+
+Author Rota Matthias & Sofia QU
+
